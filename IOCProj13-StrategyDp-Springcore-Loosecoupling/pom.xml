@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.nit</groupId>
-  <artifactId>IOCProj12-PropertiesFile-ValueInjection</artifactId>
+  <artifactId>IOCProj09-StrategyDp-Springcore-maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>IOCProj06-PropertiesFile-ValueInjection</name>
+  <name>IOCProj09-StrategyDp-Springcore-maven</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -25,35 +25,29 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      
- 
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
-	  
-	           <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-context-support</artifactId>
-    <version>6.1.12</version>
-</dependency>
-
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
-    
     <!-- Optionally: parameterized tests support -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>6.1.12</version>
+</dependency>
 
   </dependencies>
-
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
