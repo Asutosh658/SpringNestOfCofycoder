@@ -1,4 +1,4 @@
-package com.nt.main;
+ package com.nt.main;
 
 import java.util.Locale;
 import java.util.Scanner;
