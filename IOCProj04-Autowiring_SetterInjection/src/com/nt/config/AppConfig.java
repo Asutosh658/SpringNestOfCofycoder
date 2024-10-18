@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages ="com.nt.sbeans")
 public class AppConfig {
-    @Bean(name = "ltime")
+    @Bean
 	public LocalTime creatLtime() {
  
 		return LocalTime.now();

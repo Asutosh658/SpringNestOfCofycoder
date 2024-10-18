@@ -1,5 +1,6 @@
 package com.nt.config;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 
@@ -15,4 +16,9 @@ public class AppConfig {
  
 		return LocalTime.now();
 	}
+    @Bean(name = "lDATE")
+ 	public LocalDate creatLDATE() {
+  
+ 		return LocalDate.now();
+ 	}
 }

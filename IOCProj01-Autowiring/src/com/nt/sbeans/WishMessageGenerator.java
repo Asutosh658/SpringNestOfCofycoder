@@ -1,5 +1,6 @@
 package com.nt.sbeans;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 
@@ -13,6 +14,8 @@ public class WishMessageGenerator {
 	@Autowired
 	private LocalTime lt;
 	
+	@Autowired
+	private LocalDate ld;
   public String  generateLtime(String user) {
 	 
 	  int hour=lt.getHour();
@@ -34,5 +37,21 @@ public class WishMessageGenerator {
 		  return user+" Good Night";
 	  }
 	
+}
+  
+  public String  generateSeason() {
+		int currentMonthValue = ld.getMonthValue();
+		
+		if (currentMonthValue >=3 &&currentMonthValue<=6)
+		{
+			return "Summer Season " ;
+		}
+		else if (currentMonthValue >=7 &&currentMonthValue<=10)
+		{
+			return "Rainy Season " ;
+		}
+		else {
+			return "Winter Season";
+		}
 }
 }

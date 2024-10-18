@@ -13,7 +13,7 @@ public class WishMessageGenerator {
 	//@Autowired
 	private LocalTime lt;
 	
-	//Getter injection
+	//Setter injection
 	@Autowired
 	public void setLt(LocalTime lt) {
 		System.out.println("WishMessageGenerator.setLt()");

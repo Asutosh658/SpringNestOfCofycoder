@@ -14,10 +14,10 @@ public class StrategyDP_Springcore_Test {
 		String Str = fpkt.shopping(new String[] {"dress","bike"},new double[] {5000.00,200000.00});
 		System.out.println(Str);
 		
-	fpkt.setCourier(ctx.getBean("bdart",BlueDart.class));
+	/*fpkt.setCourier(ctx.getBean("bdart",BlueDart.class));
 	String Str2=fpkt.shopping(new String[] {"dress","bike"},new double[] {5000.00,200000.00});
 	System.out.println(Str2);
-     ctx.close();
+     ctx.close();*/
 	}
 
 }

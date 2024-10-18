@@ -14,8 +14,11 @@ public class Autowiring_SeasonFinder_Test {
 		SeasonFinder sft =ctx.getBean("abc",SeasonFinder.class);
 		 String Str= sft.generateSeason();
 		  System.out.println("Current season ::"+Str);
-		
+		  
+		 
 		  ctx.close();
+		  
+		  
 
 	}
 
