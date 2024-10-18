@@ -2,8 +2,8 @@ package com.nt.main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+
 import com.nt.config.Appconfig;
-import com.nt.sbeans.BlueDart;
 import com.nt.sbeans.Flipkart;
 
 public class StrategyDP_Springcore_Test {
@@ -16,8 +16,8 @@ public class StrategyDP_Springcore_Test {
 		
 	/*fpkt.setCourier(ctx.getBean("bdart",BlueDart.class));
 	String Str2=fpkt.shopping(new String[] {"dress","bike"},new double[] {5000.00,200000.00});
-	System.out.println(Str2);
-     ctx.close();*/
+	System.out.println(Str2);*/
+     ctx.close();
 	}
 
 }
