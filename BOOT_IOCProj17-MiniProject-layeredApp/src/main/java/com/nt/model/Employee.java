@@ -10,4 +10,8 @@ public class Employee {
     private Double salary;
     private Integer DeptNo;
     
+    private Double grossSalary;
+    private Double netSalary;
+    
+    
 }
