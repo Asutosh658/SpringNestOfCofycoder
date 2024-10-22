@@ -12,7 +12,7 @@ public final class Flipkart {
 	
 	
 	
-	
+	@Autowired
 	private ICourier courier;
 	//nothing but it is useful when you want to change dependency  dynamically
 	//This is useful in cases where you want to switch the courier service at runtime, based on different conditions or configurations.
@@ -22,12 +22,8 @@ public final class Flipkart {
      }
      */
 	
-	@Autowired
-	public Flipkart(@Qualifier("dtdc") ICourier courier)
-	{
-		System.out.println("Flipkart.Flipkart()");
-	   this.courier=courier;	
-	}
+
+	
      public String  shopping (String items[],double price[])
      {
     	  double billamount=0.0;

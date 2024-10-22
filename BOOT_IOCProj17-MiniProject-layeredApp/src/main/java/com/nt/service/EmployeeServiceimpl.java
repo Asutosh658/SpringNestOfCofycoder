@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.nt.dao.IEmployeeDao;
 import com.nt.model.Employee;
-@Service("empser")
+@Service("eservice")
 public class EmployeeServiceimpl implements IEmployeeService {
 	@Autowired
 	 private IEmployeeDao impd;
