@@ -22,9 +22,9 @@ public class EmployeeServiceimpl implements IEmployeeService {
 		
 		list.sort((t1,t2)->t1.getEmpId().compareTo(t2.getEmpId()));
 		
-		list.forEach(emp->{
-			emp.setGrossSalary(emp.getSalary()+(emp.getSalary()*0.5));
-		    emp.setNetSalary(emp.getGrossSalary()-(emp.getGrossSalary()*0.4));
+		list.forEach(empdetails->{
+			empdetails.setGrossSalary(empdetails.getSalary()+(empdetails.getSalary()*0.5));
+		    empdetails.setNetSalary(empdetails.getGrossSalary()-(empdetails.getGrossSalary()*0.4));
 		
 		});
 		
