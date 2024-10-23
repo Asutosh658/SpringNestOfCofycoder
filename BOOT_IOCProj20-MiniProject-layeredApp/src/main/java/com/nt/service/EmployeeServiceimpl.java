@@ -16,11 +16,12 @@ public class EmployeeServiceimpl implements IEmployeeService {
   
 	 public List<Employee> fetchEmployeeDetails(String desg1,String desg2,String desg3)throws Exception
 	 {
-		 List<Employee> list=empdao.getEmployeeDetails(desg1, desg2, desg3);
+		
 		 
 		desg1= desg1.toUpperCase();
 		desg2= desg2.toUpperCase();
 		desg3= desg3.toUpperCase();
+		 List<Employee> list=empdao.getEmployeeDetails(desg1, desg2, desg3);
 		
 		list.sort((t1,t2)->t1.getEmpId().compareTo(t2.getEmpId()));
 		

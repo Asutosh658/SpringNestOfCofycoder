@@ -2,6 +2,7 @@ package com.nt.dao;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,11 +32,13 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 			ps.setString(2, desg2);
 			ps.setString(3, desg3);
 			
-			list=new ArrayList<Employee>();
+			
 			try(ResultSet rs = ps.executeQuery();)
-			{   Employee emp= new Employee();
+			{  
+				list=new ArrayList<Employee>();
 				while(rs.next())
 				{
+					 Employee emp= new Employee();
 					emp.setEmpId(rs.getInt(1));
 					emp.setEName(rs.getString(2));
 					emp.setJob(rs.getString(3));

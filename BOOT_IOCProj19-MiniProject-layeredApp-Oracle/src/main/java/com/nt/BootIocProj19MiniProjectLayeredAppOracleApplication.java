@@ -12,35 +12,32 @@ import com.nt.controller.EmployeeProcessOperation;
 import com.nt.model.Employee;
 
 @SpringBootApplication
-public class BootIocProj17MiniProjectLayeredAppApplication {
+public class BootIocProj19MiniProjectLayeredAppOracleApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx=SpringApplication.run(BootIocProj17MiniProjectLayeredAppApplication.class, args);
-		EmployeeProcessOperation epo=ctx.getBean("econtroller",EmployeeProcessOperation.class);
-		
+		ApplicationContext ctx=SpringApplication.run(BootIocProj19MiniProjectLayeredAppOracleApplication.class, args);
+		EmployeeProcessOperation epo= ctx.getBean("econtroller",EmployeeProcessOperation.class);
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter Desg1::");
-		String desg1=sc.nextLine();
+		String desg1=sc.next();
 		System.out.println("enter Desg2::");
-		String desg2=sc.nextLine();
+		String desg2=sc.next();
 		System.out.println("enter Desg3::");
-		String desg3=sc.nextLine();
+		String desg3=sc.next();
 		
 		
 		try {
 			List<Employee> list=epo.employeeDetailsProcess(desg1, desg2, desg3);
-			list.forEach(emp->System.out.println(emp));
+			list.forEach(emp->{System.out.println(emp);});
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("try after Sometime");
 		}
-		
-		
-//		((ConfigurableApplicationContext) ctx).close();
-//		sc.close();
-	}
 	
+		//sc.close();
+		((ConfigurableApplicationContext) ctx).close();
+	}
 
 }

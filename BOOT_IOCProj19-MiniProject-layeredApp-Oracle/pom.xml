@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>nit</groupId>
-	<artifactId>BOOT_IOCProj17-MiniProject-layeredApp</artifactId>
+	<artifactId>BOOT_IOCProj19-MiniProject-layeredApp-Oracle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BOOT_IOCProj17-MiniProject-layeredApp</name>
+	<name>BOOT_IOCProj19-MiniProject-layeredApp-Oracle</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

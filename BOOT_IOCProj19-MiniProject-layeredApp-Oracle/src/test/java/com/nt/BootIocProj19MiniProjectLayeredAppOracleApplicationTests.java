@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BootIocProj17MiniProjectLayeredAppApplicationTests {
+class BootIocProj19MiniProjectLayeredAppOracleApplicationTests {
 
 	@Test
 	void contextLoads() {
