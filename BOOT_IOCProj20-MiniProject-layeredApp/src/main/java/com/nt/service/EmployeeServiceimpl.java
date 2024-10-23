@@ -3,6 +3,7 @@ package com.nt.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.nt.dao.IEmployeeDao;
@@ -10,6 +11,7 @@ import com.nt.model.Employee;
 @Service("eservice")
 public class EmployeeServiceimpl implements IEmployeeService {
 	@Autowired
+	@Qualifier("empmysqldao")
 	 private IEmployeeDao empdao;
   
 	 public List<Employee> fetchEmployeeDetails(String desg1,String desg2,String desg3)throws Exception

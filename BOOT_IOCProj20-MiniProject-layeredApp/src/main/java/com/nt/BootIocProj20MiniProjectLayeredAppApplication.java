@@ -12,10 +12,10 @@ import com.nt.controller.EmployeeProcessOperation;
 import com.nt.model.Employee;
 
 @SpringBootApplication
-public class BootIocProj17MiniProjectLayeredAppApplication {
+public class BootIocProj20MiniProjectLayeredAppApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx=SpringApplication.run(BootIocProj17MiniProjectLayeredAppApplication.class, args);
+		ApplicationContext ctx=SpringApplication.run(BootIocProj20MiniProjectLayeredAppApplication.class, args);
 		EmployeeProcessOperation epo=ctx.getBean("econtroller",EmployeeProcessOperation.class);
 		
 		
@@ -38,9 +38,11 @@ public class BootIocProj17MiniProjectLayeredAppApplication {
 		}
 		
 		
-//		((ConfigurableApplicationContext) ctx).close();
-//		sc.close();
+		((ConfigurableApplicationContext) ctx).close();
+		sc.close();
 	}
 	
 
 }
+
+

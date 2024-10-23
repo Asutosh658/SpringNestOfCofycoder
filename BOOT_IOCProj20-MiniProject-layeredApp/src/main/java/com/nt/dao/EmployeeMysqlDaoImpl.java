@@ -14,9 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.nt.model.Employee;
-@Repository("empdao")
-public class EmployeeDaoImpl implements IEmployeeDao {
-	private static final String getEmpDetailsQuery="select empno,ename,job,sal,deptno from emp where job in (?,?,?) ";	
+@Repository("empmysqldao")
+public class EmployeeMysqlDaoImpl implements IEmployeeDao {
+	private static final String getEmpDetailsQuery="select empno,ename,sal,job,deptno from dbspringnest.emp where job in (?,?,?) ";	
 	@Autowired
 	private DataSource ds;
 	
@@ -33,13 +33,14 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 			
 			list=new ArrayList<Employee>();
 			try(ResultSet rs = ps.executeQuery();)
-			{   Employee emp= new Employee();
+			{   //Employee emp= new Employee();
 				while(rs.next())
 				{
+					Employee emp= new Employee();
 					emp.setEmpId(rs.getInt(1));
 					emp.setEName(rs.getString(2));
-					emp.setJob(rs.getString(3));
-					emp.setSalary(rs.getDouble(4));
+					emp.setSalary(rs.getDouble(3));
+					emp.setJob(rs.getString(4));
 					emp.setDeptNo(rs.getInt(5));
 					list.add(emp);
 				}
@@ -51,7 +52,7 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			
+			throw e;
 		}
 		
 		return list;
