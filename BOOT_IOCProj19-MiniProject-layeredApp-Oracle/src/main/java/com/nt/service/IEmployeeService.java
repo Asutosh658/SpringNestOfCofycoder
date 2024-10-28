@@ -7,4 +7,6 @@ import com.nt.model.Employee;
 public interface IEmployeeService {
 
   public List<Employee> fetchEmployeeDetails(String desg1,String desg2,String desg3)throws Exception;
+  
+  public String   processEmployeeDetails(Employee emp) throws Exception;
 }

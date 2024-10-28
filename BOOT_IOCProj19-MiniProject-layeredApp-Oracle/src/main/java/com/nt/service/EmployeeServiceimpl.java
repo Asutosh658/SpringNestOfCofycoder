@@ -12,7 +12,7 @@ public class EmployeeServiceimpl implements IEmployeeService {
 	@Autowired
 	 private IEmployeeDao empdao;
   
-	 public List<Employee> fetchEmployeeDetails(String desg1,String desg2,String desg3)throws Exception
+	public List<Employee> fetchEmployeeDetails(String desg1,String desg2,String desg3)throws Exception
 	 {
 		 
 		 
@@ -33,4 +33,11 @@ public class EmployeeServiceimpl implements IEmployeeService {
 		return list;
 		 
 	 }
+
+	@Override
+	public String processEmployeeDetails(Employee emp) throws Exception {
+		int i=empdao.saveEmployeeDetails(emp);
+		return i==0?"EmpNotregisterd":"Empregisterd";
+	
+	}
 }

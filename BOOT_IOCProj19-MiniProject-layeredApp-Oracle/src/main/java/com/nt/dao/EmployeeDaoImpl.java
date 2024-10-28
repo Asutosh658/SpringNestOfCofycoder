@@ -17,7 +17,8 @@ import org.springframework.stereotype.Repository;
 import com.nt.model.Employee;
 @Repository("empdao")
 public class EmployeeDaoImpl implements IEmployeeDao {
-	private static final String getEmpDetailsQuery="select empno,ename,job,sal,deptno from emp where job in (?,?,?) ";	
+	private static final String getEmpDetailsQuery="select empno,ename,job,sal,deptno from emp where job in (?,?,?) ";
+	private static final String setEmpDetailsQuery="insert into emp(empno,ename,job,sal,deptno)values(emp_seq.nextval,?,?,?,?)";
 	@Autowired
 	private DataSource ds;
 	
@@ -58,6 +59,31 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 		}
 		
 		return list;
+	}
+
+	@Override
+	public int saveEmployeeDetails(Employee emp) throws Exception {
+		   
+		int result= 0;
+		try(Connection con1=ds.getConnection();
+			PreparedStatement ps1=con1.prepareStatement(setEmpDetailsQuery);	)
+		{
+			 
+			
+			ps1.setString(1,emp.getEName());
+			ps1.setString(2, emp.getJob());
+			ps1.setDouble(3, emp.getSalary());
+			ps1.setInt(4,emp.getDeptNo());
+			
+			result=ps1.executeUpdate();
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("some DB problem");
+		}
+		
+		return result;
 	}
 
 }

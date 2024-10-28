@@ -21,4 +21,11 @@ public class EmployeeProcessOperation {
 		
 	}
 	
+	public String empcontrolprocess(Employee emp)throws Exception
+	{
+		
+		String str= eservice.processEmployeeDetails(emp);
+		return str;
+	}
+	
 }
