@@ -12,9 +12,11 @@ public class CrudRepoRunnerTest implements CommandLineRunner {
     
 	@Autowired
 	private IPlayerManagement playerimpl;
+
 	
 	
-	@Override
+	
+/*	@Override
 	public void run(String... args) throws Exception {
 	   
 		Player pl= new Player("Syrus", "Odisha", "Football", 50000.00);
@@ -29,6 +31,27 @@ public class CrudRepoRunnerTest implements CommandLineRunner {
 			System.out.println("Problem in Runner Class ");
 		}
 
+	}*/
+	
+	@Override
+	public void run(String... args) throws Exception {
+		boolean flag=playerimpl.isPlayerAvailable(200);
+		
+	try {
+		if(flag)
+		{
+			System.out.println("player available");
+		}
+		else {
+			System.out.println("player not available");
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+		System.out.println("CrudRepoRunnerTest.run()");
 	}
+		
+	}
+	
+	
 
 }
