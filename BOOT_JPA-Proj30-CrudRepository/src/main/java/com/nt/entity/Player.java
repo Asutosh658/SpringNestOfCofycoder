@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,8 @@ public class Player {
 	
 	@Column(name="playerID")
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@SequenceGenerator(name="player_seq_generator",sequenceName = "player_seq",initialValue =100  ,allocationSize = 1)
+	@GeneratedValue(generator ="player_seq_generator",  strategy = GenerationType.SEQUENCE)
 	private Integer playerid;
 	
 	@Nonnull
